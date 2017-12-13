@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tararira</title>
+	</head>
+	<body style="font-size:14px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div style="background-color:#076378; text-align:center; color:white; height:50px; font-size:24px; border-radius:10px; vertical-align:middle">
+						<span style="display:inline; line-height:50px">invertir.&#8203;la</span>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px">
+				<div class="col-md-12">
+					Hola <%= @resource.first_name %>,
+				</div>
+			</div>
+			<div class="row" style="margin-top:10px">
+				<div class="col-md-12">
+					<span style="font-size:24px; color:#076378">Felicitaciones y Bienvenido a invertir.&#8203;la!</span>
+				</div>
+			</div>
+			<div class="row" style="margin-top:10px">
+				<div class="col-md-12">
+					Presiona el siguiente bot&oacute;n para confirmar tu cuenta.
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px">
+				<div class="col-md-12">
+					<%= link_to confirmation_url(@resource, {confirmation_token: @token, config: message['client-config'].to_s, redirect_url: message['redirect-url']}).html_safe do %>
+						<div style="text-align:center; vertical-align:middle; background-color:#076378; width:300px; height:60px; border-radius:10px; margin:0 auto;">
+							<span style="color:white; font-size:24px; display:inline; line-height:60px; text-decoration:none; text-underline:none;">Confirmar Cuenta</span>
+						</div>
+					<% end %>
+				</div>
+			</div>
+			<div class="row" style="margin-top:30px">
+				<div class="col-md-12">
+					Record&aacute; que siempre podes comunicarte con nosotros desde el &iacute;cono que aparece en la esquina superior derecha de la app.
+				</div>
+			</div>
+			<div class="row" style="margin-top:10px">
+				<div class="col-md-12">
+					<%= image_tag "showmessagebutton.png", style: "margin:0 auto;display:block" %>
+				</div>
+			</div>
+			<div class="row" style="margin-top:10px">
+				<div class="col-md-12">
+					¡Saludos!
+				</div>
+			</div>
+			<div class="row" style="margin-top:10px">
+				<div class="col-md-12" style="color:#076378">
+					Equipo invertir.&#8203;la
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px">
+				<div class="col-md-12">
+					<div style="background-color:#f2f2f2; font-size:12px; padding:10px 10px 10px 10px;">
+						AVISO LEGAL: Lorem ipsum dolor sit amet, has et mollis apeirian adipisci, te oporteat corrumpit mei, eos probo graeci nemore ad. Cum at nibh causae moderatius. Facilis urbanitas in est. Sed ex cibo iuvaret delectus, solum expetenda scribentur cu eum. Mei id ferri luptatum consetetur, est ei facer quando persecuti.
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

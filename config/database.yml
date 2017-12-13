@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  template: template1
+  pool: 5
+  timeout: 5000
+  host: localhost
+  user: postgres
+  password: tararira
+
+development:
+  <<: *default
+  database: tararira_development
+
+test:
+  <<: *default
+  database: tararira_test
+
+production:
+  <<: *default
+  database: tararira_production
